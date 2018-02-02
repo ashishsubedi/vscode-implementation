@@ -1,27 +1,20 @@
 #include<stdio.h>
-int determ(int, int a[][10]);
+int determ(int n, int a[][n]);
 int main(){
 	
-	int m=2;
+	int n=3;
 //	scanf("%d",&m);
 	
-	int a[10][10] = {
-		1,2,3,
-		4,5,6,
-		7,8,9
-	};
+	int a[n][n];
 
-
-
-
-	printf("%d",determ(m,a) );
+	printf("%d",determ(n,a) );
 	
 
 	return 0;	
 }
 
-int determ(int n,int a[][10]){
-	int b[10][10];
+int determ(int n,int a[][n]){
+	int b[n][n];
 	int i,j,k,c1,c2;
 	int sign = 1;
 	int det= 0;
@@ -46,9 +39,13 @@ int determ(int n,int a[][10]){
 						}
 					}
 				}
+				
+				
 			}
-			det += sign * a[0][j]* determ(n-1,b);
-			sign= -sign;
+			
+			det += sign * a[0][j] * determ(n - 1, b);
+			
+			sign = -sign;
 		}
 	}
 
