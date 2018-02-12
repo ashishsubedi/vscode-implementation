@@ -1,5 +1,5 @@
 #include<stdio.h>
-void  add(int a[][20],int b[][20], int m);
+void  add(int a[][20],int b[][20], int n,int m);
 int main(){
 	int n = 3,m = 3;
 	//scanf("%d",&n);
@@ -7,13 +7,13 @@ int main(){
 	
 	for (int i = 0; i < n; ++i)
 	{
-		for (int j = 0; j < n; ++j)
+		for (int j = 0; j < m; ++j)
 		{
 			scanf("%d", &a[i][j]);
 		}
 		
 	}
-	for (int i = 0; i < m; ++i)
+	for (int i = 0; i < n; ++i)
 	{
 		for (int j = 0; j < m; ++j)
 		{
@@ -21,15 +21,15 @@ int main(){
 		}
 		
 	}
-	add(a,b,m);
+	add(a,b,n,m);
 	
 	return 0;
 }
-void  add(int a[][20],int b[][20], int m){
+void  add(int a[][20],int b[][20], int n,int m){
 	
 	int i,j;
 	int add[20][20];
-	for (int i = 0; i < m; ++i)
+	for (int i = 0; i < n; ++i)
 	{
 		for (int j = 0; j < m; ++j)
 		{
@@ -39,7 +39,7 @@ void  add(int a[][20],int b[][20], int m){
 		
 	}
 	printf("The added matrix is \n");
-	for (int i = 0; i < m; ++i)
+	for (int i = 0; i < n; ++i)
 	{
 		for (int j = 0; j < m; ++j)
 		{

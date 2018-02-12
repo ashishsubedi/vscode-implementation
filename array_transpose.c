@@ -3,7 +3,7 @@ void  transpose(int matrix[][20],int n);
 int main(){
 	int n = 3;
 	//scanf("%d",&n);
-	int a[20][20];
+	int a[n][20];
 	int i,j;
 	for (int i = 0; i < n; ++i)
 	{
@@ -28,13 +28,13 @@ int main(){
 }
 void transpose(int matrix[][20],int n){
 	int i,j;
-	int b[20][20];
+	int b[n][20];
 	for (int i = 0; i < n; ++i)
 	{
 		for (int j = 0; j < n; ++j)
 		{
 			b[j][i] = matrix[i][j];
-			printf("%d  %d\n", b[j][i], matrix[i][j]);
+		//	printf("%d  %d\n", b[j][i], matrix[i][j]);
 		}
 		
 	}

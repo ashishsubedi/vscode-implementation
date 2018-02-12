@@ -5,16 +5,16 @@ typedef struct{
     int rn;
 } student;
 int main(){
-    student s[5];
+    student s[3];
     int i,j;
-    for(i =0; i<5; i++){
+    for(i =0; i<3; i++){
         printf("Details of %d student",i+1);
         scanf(" %[^\n]",s[i].name);
         fflush(stdin);
-        //scanf("%d",&s[i].rn);
+        scanf("%d",&s[i].rn);
     }
-    for(i = 0; i< 4; i++){
-        for(j = 0; j < 4-i; j++){
+    for(i = 0; i< 2; i++){
+        for(j = 0; j < 2-i; j++){
             if(strcmp(s[j].name,s[j+1].name)>0){
                
               student temp= s[j];
@@ -24,7 +24,7 @@ int main(){
             }
         }
     }
-    for(i=0; i<5; i++){
+    for(i=0; i<3; i++){
         printf("%s\t%d\n", s[i].name, s[i].rn);
     }
 

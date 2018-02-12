@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<math.h>
 typedef struct{
-    int x;
-    int y;
+    double x;
+    double y;
 }graph;
 double distance(graph);
 int main(){
