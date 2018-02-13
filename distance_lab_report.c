@@ -3,21 +3,21 @@
 typedef struct{
     double x;
     double y;
-}graph;
-double distance(graph);
+}points;
+double distance(points);
 int main(){
 
-    graph s;
+    points s;
     double dist;
     
     printf("Enter x and y coordinates");
-    scanf("%d%d",&s.x,&s.y);
+    scanf("%lf%lf",&s.x,&s.y);
     dist= distance(s);
     printf("The distance is : %g", dist);
 
     return 0;
 }
-double distance(graph s){
+double distance(points s){
     double dist = 0;
     dist = sqrt(pow(s.x,2)+pow(s.y,2));
 
