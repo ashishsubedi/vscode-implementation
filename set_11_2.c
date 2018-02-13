@@ -1,5 +1,5 @@
 #include<stdio.h>
-void mul(int *pa, int *pb, int *pm);
+//void mul(int *pa, int *pb, int *pm);
     int main(){
         int r1, c1, r2, c2;
         int i, j, k, sum = 0;
@@ -25,17 +25,17 @@ void mul(int *pa, int *pb, int *pm);
                 scanf("%d", &b[i][j]);
             }
         }
-        if (c1 != r1)
+        if (c1 != r2)
         {
             printf("matrix cannot be multiplied. Try again\n");
+            main();
             return 0;
         }
 
         // Matrix Multiplication
-        // mul(pa, pb, pm);
 
         for(i=0;i<r1; i++){
-        //sum = 0;
+       
         for(j=0;j<c2;j++){
             for(k=0;k<r2;k++){
                 // sum+= a[i][k]*b[k][j];
@@ -57,23 +57,5 @@ void mul(int *pa, int *pb, int *pm);
         }
         printf("\n");
     }
-
-    
-
     return 0;
 }
-/* void mul(int *pa,int *pb, int*pm){
-    int i,j,k;
-    for (i = 0; i < r1; i++)
-    {
-        //sum = 0;
-        for (j = 0; j < c2; j++)
-        {
-            for (k = 0; k < r2; k++)
-            {
-                sum += pa[i][k] * pb[k][j];
-            }
-            pm[i][j] = sum;
-            sum = 0;
-        }
-} */
